@@ -13,7 +13,7 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/howeyc/gopass v0.0.0-20210920133722-c8aef6fb66ef
 	github.com/ian-kent/go-log v0.0.0-20160113211217-5731446c36ab
-	github.com/kardianos/service v1.2.1
+	github.com/kardianos/service v1.2.2
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/stretchr/testify v1.8.0 // indirect
 	github.com/t-k/fluent-logger-golang v1.0.0 // indirect
