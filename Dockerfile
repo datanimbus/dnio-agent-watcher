@@ -6,23 +6,10 @@
 FROM golang:1.18-alpine AS agents
 ENV GOPROXY=direct
 
-# RUN apk add git
+RUN apk add git
 # RUN apk add make
 
 WORKDIR /app
-
-# Fetching Dependencies
-RUN go get -u github.com/gorilla/mux
-RUN go get -u github.com/asdine/storm
-RUN go get -u github.com/satori/go.uuid
-RUN go get -u github.com/howeyc/fsnotify
-RUN go get -u github.com/howeyc/gopass
-RUN go get -u github.com/appveen/go-log/log
-RUN go get -u github.com/kardianos/service
-RUN go get -u github.com/nats-io/go-nats-streaming
-RUN go get -u github.com/nats-io/go-nats
-RUN go get -u github.com/robfig/cron
-RUN go get -u github.com/ian-kent/go-log/log
 
 COPY . .
 
