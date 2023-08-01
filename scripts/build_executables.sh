@@ -5,18 +5,18 @@ cd $WORKSPACE
 set -e
 if [ -f $WORKSPACE/../TOGGLE ]; then
 	echo "****************************************************"
-    echo "data.stack.b2b.agent.watcher :: Toggle mode is on, terminating build"
-    echo "data.stack.b2b.agent.watcher :: BUILD CANCLED"
+    echo "datanimbus.io.b2b.agent.watcher :: Toggle mode is on, terminating build"
+    echo "datanimbus.io.b2b.agent.watcher :: BUILD CANCLED"
     echo "****************************************************"
     exit 0
 fi
 
 echo "****************************************************"
-echo "data.stack.b2b.agent.watcher :: Clearing exec folder"
+echo "datanimbus.io.b2b.agent.watcher :: Clearing exec folder"
 echo "****************************************************"
 rm exec/* || true
 echo "****************************************************"
-echo "data.stack.b2b.agent.watcher :: Building excutables"
+echo "datanimbus.io.b2b.agent.watcher :: Building excutables"
 echo "****************************************************"
 # echo "env GOOS=android GOARCH=arm go build -ldflags="-s -w" -o ds-agent-android-arm ./v1"
 # env GOOS=android GOARCH=arm go build -ldflags="-s -w" -o exec/ds-agent-android-arm ./v1 || true
