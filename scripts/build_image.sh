@@ -47,14 +47,14 @@ if [ -f $WORKSPACE/../CLEAN_BUILD_B2B_AGENT_WATCHER ]; then
     echo "datanimbus.io.b2b.agent.watcher :: Doing a clean build"
     echo "****************************************************"
 
-    docker build --no-cache -t datanimbus.io.b2b.agent.watcher.$TAG --build-arg SIGNING_KEY_USER=$SIGNING_KEY_USER --build-arg SIGNING_KEY_PASSWORD=$SIGNING_KEY_PASSWORD .
+    docker build --no-cache --build-arg SIGNING_KEY_USER=$SIGNING_KEY_USER --build-arg SIGNING_KEY_PASSWORD=$SIGNING_KEY_PASSWORD -t datanimbus.io.b2b.agent.watcher.$TAG .
     rm $WORKSPACE/../CLEAN_BUILD_B2B_AGENT_WATCHER
 
 else
     echo "****************************************************"
     echo "datanimbus.io.b2b.agent.watcher :: Doing a normal build"   
     echo "****************************************************"
-    docker build -t datanimbus.io.b2b.agent.watcher.$TAG --build-arg SIGNING_KEY_USER=$SIGNING_KEY_USER --build-arg SIGNING_KEY_PASSWORD=$SIGNING_KEY_PASSWORD .
+    docker build --build-arg SIGNING_KEY_USER=$SIGNING_KEY_USER --build-arg SIGNING_KEY_PASSWORD=$SIGNING_KEY_PASSWORD -t datanimbus.io.b2b.agent.watcher.$TAG .
 fi
 echo "****************************************************"
 echo "datanimbus.io.b2b.agent.watcher :: BUILD SUCCESS :: datanimbus.io.b2b.agent.watcher.$TAG"
